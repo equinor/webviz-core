@@ -1,0 +1,39 @@
+language : python
+cache: pip
+
+sudo: required
+
+addons:
+    chrome: stable
+
+services:
+  - docker
+
+python:
+  - "2.7"
+  - "3.6"
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - sudo apt-get -qq update
+  - pip install pycodestyle
+
+
+install:
+  - pip install -r requirements.txt
+  - pip install -r webviz_components/dev-requirements.txt
+  - cd webviz_components
+  - npm install
+  - cd ..
+
+script:
+  - cd webviz_plotly
+  - pip install .
+  - pycodestyle src tests ../examples
+  - pytest --doctest-modules src/webviz_plotly
+  - pytest tests
+  - cd ../webviz_components
+  - npm run lint
+  - npm run test

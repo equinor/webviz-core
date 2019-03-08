@@ -1,0 +1,13 @@
+# Packages needed to run the tests.
+# Switch into a virtual environment
+
+chromedriver-binary
+dash>=0.31.0
+dash-core-components
+dash-html-components
+dash-renderer
+ipdb
+percy
+selenium
+flake8
+pylint

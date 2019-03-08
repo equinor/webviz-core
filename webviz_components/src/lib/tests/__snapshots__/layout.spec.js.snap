@@ -1,0 +1,734 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render Layout with banner 1`] = `
+.c5 {
+  color: var(--menuLinkColor);
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.c5:hover {
+  color: var(--menuLinkHoverColor);
+}
+
+.c1 {
+  background: var(--menuBackground);
+}
+
+.c2 {
+  background: var(--menuBackground);
+  min-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-familiy: system-ui;
+}
+
+.c6 {
+  margin: 12px 20px 20px 18px;
+  margin: 20px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  background-color: #333333;
+  height: 534px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: var(--bannerFontFamily);
+  font-weight: var(--bannerFontWeight);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width:1201px) {
+  .c1 {
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: fill-available;
+  }
+}
+
+@media (max-width:1200px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (min-width:1201px) {
+  .c8 {
+    height: 100%;
+  }
+}
+
+@media (max-width:1200px) {
+  .c7 {
+    text-align: center;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c6 {
+    height: 50px;
+    margin: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width:1201px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:1200px) {
+  .c10 {
+    height: 380px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div
+  className="c0"
+  id="layout"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            <svg
+              fill="None"
+              height="18px"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="4"
+              width="22px"
+            >
+              <path
+                d="M2,2 L20,2 M2,9 L20,9 M2,16 L20,16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="/"
+            onClick={[Function]}
+          >
+            <div
+              id="logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+  <div
+    className="c9"
+  >
+    <div
+      className="c10"
+      color="#333333"
+      role="banner"
+    >
+      <p
+        className="c11"
+      >
+        Banner
+      </p>
+    </div>
+    <div
+      id="page"
+      title="Page"
+    >
+      Page
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layout should render Layout with multiple child elements 1`] = `
+.c5 {
+  color: var(--menuLinkColor);
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.c5:hover {
+  color: var(--menuLinkHoverColor);
+}
+
+.c1 {
+  background: var(--menuBackground);
+}
+
+.c2 {
+  background: var(--menuBackground);
+  min-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-familiy: system-ui;
+}
+
+.c6 {
+  margin: 12px 20px 20px 18px;
+  margin: 20px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-family: var(--menuLinkFont);
+  font-weight: var(--menuLinkFontWeight);
+  font-style: var(--menuLinkFontStyle);
+  border-bottom: 1px solid white;
+  color: var(--menuLinkColor);
+}
+
+.c9:hover {
+  background: var(--menuLinkBackgroundHover);
+  color: var(--menuLinkHoverColor);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width:1201px) {
+  .c1 {
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: fill-available;
+  }
+}
+
+@media (max-width:1200px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (min-width:1201px) {
+  .c8 {
+    height: 100%;
+  }
+}
+
+@media (max-width:1200px) {
+  .c7 {
+    text-align: center;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c6 {
+    height: 50px;
+    margin: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width:1201px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:1200px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div
+  className="c0"
+  id="layout"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            <svg
+              fill="None"
+              height="18px"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="4"
+              width="22px"
+            >
+              <path
+                d="M2,2 L20,2 M2,9 L20,9 M2,16 L20,16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="/"
+            onClick={[Function]}
+          >
+            <div
+              id="logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="c8"
+      >
+        <a
+          className="c9"
+          href="/subpage 1"
+          onClick={[Function]}
+          selected={null}
+        >
+          Subpage 1
+        </a>
+        <a
+          className="c9"
+          href="/subpage 2"
+          onClick={[Function]}
+          selected={null}
+        >
+          Subpage 2
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c10"
+  >
+    <div
+      id="frontpage"
+      title="Frontpage"
+    >
+      Frontpage
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layout should render Layout with one child element 1`] = `
+.c5 {
+  color: var(--menuLinkColor);
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.c5:hover {
+  color: var(--menuLinkHoverColor);
+}
+
+.c1 {
+  background: var(--menuBackground);
+}
+
+.c2 {
+  background: var(--menuBackground);
+  min-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-familiy: system-ui;
+}
+
+.c6 {
+  margin: 12px 20px 20px 18px;
+  margin: 20px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width:1201px) {
+  .c1 {
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: fill-available;
+  }
+}
+
+@media (max-width:1200px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (min-width:1201px) {
+  .c8 {
+    height: 100%;
+  }
+}
+
+@media (max-width:1200px) {
+  .c7 {
+    text-align: center;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c6 {
+    height: 50px;
+    margin: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width:1201px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:1200px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div
+  className="c0"
+  id="layout"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            <svg
+              fill="None"
+              height="18px"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="4"
+              width="22px"
+            >
+              <path
+                d="M2,2 L20,2 M2,9 L20,9 M2,16 L20,16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="/"
+            onClick={[Function]}
+          >
+            <div
+              id="logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+  <div
+    className="c9"
+  >
+    <div
+      id="page"
+      title="page"
+    >
+      Page
+    </div>
+  </div>
+</div>
+`;

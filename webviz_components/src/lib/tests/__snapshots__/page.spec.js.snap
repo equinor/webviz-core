@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should render Page 1`] = `
+<div
+  id="page"
+  style={
+    Object {
+      "margin": "20px",
+    }
+  }
+>
+  <h1>
+    Header
+  </h1>
+  <p>
+    Some text here
+  </p>
+  <p>
+    Some more text here
+  </p>
+</div>
+`;

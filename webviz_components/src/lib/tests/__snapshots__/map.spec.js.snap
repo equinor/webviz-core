@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map should render Map 1`] = `
+<div
+  style={
+    Object {
+      "height": "800px",
+      "marginBottom": "800px",
+    }
+  }
+>
+  <div
+    id="container-simple-map"
+  >
+    <canvas
+      id="canvas-simple-map"
+      style={
+        Object {
+          "pointerEvents": "none",
+          "position": "absolute",
+          "zIndex": "1",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`make2DLayers should match snapshot 1`] = `
+Array [
+  Array [
+    Object {
+      "i": 0,
+      "j": 0,
+      "k": 0,
+      "points": Array [
+        Array [
+          0,
+          0,
+        ],
+        Array [
+          1,
+          0,
+        ],
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          0,
+          1,
+        ],
+      ],
+      "value": 1,
+    },
+    Object {
+      "i": 1,
+      "j": 0,
+      "k": 0,
+      "points": Array [
+        Array [
+          1,
+          0,
+        ],
+        Array [
+          2,
+          0,
+        ],
+        Array [
+          2,
+          1,
+        ],
+        Array [
+          1,
+          1,
+        ],
+      ],
+      "value": 0,
+    },
+    Object {
+      "i": 0,
+      "j": 1,
+      "k": 0,
+      "points": Array [
+        Array [
+          0,
+          1,
+        ],
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          1,
+          2,
+        ],
+        Array [
+          0,
+          2,
+        ],
+      ],
+      "value": 4,
+    },
+    Object {
+      "i": 1,
+      "j": 1,
+      "k": 0,
+      "points": Array [
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          2,
+          1,
+        ],
+        Array [
+          2,
+          2,
+        ],
+        Array [
+          1,
+          2,
+        ],
+      ],
+      "value": 2,
+    },
+  ],
+]
+`;
+
+exports[`makeFlowLayers should match snapshot 1`] = `
+Array [
+  Array [
+    Object {
+      "FLOWI+": 0.005,
+      "FLOWI-": 0,
+      "FLOWJ+": 0.0025,
+      "FLOWJ-": 0,
+      "i": 0,
+      "j": 0,
+      "k": 0,
+      "points": Array [
+        Array [
+          0,
+          0,
+        ],
+        Array [
+          1,
+          0,
+        ],
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          0,
+          1,
+        ],
+      ],
+      "value": 1,
+    },
+    Object {
+      "FLOWI+": 0.002,
+      "FLOWI-": 0.005,
+      "FLOWJ+": 0.0045,
+      "FLOWJ-": 0,
+      "i": 1,
+      "j": 0,
+      "k": 0,
+      "points": Array [
+        Array [
+          1,
+          0,
+        ],
+        Array [
+          2,
+          0,
+        ],
+        Array [
+          2,
+          1,
+        ],
+        Array [
+          1,
+          1,
+        ],
+      ],
+      "value": 0,
+    },
+    Object {
+      "FLOWI+": 0.001,
+      "FLOWI-": 0,
+      "FLOWJ+": 0.0025,
+      "FLOWJ-": 0.0025,
+      "i": 0,
+      "j": 1,
+      "k": 0,
+      "points": Array [
+        Array [
+          0,
+          1,
+        ],
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          1,
+          2,
+        ],
+        Array [
+          0,
+          2,
+        ],
+      ],
+      "value": 4,
+    },
+    Object {
+      "FLOWI+": 0.004,
+      "FLOWI-": 0.001,
+      "FLOWJ+": 0.0035,
+      "FLOWJ-": 0.0045,
+      "i": 1,
+      "j": 1,
+      "k": 0,
+      "points": Array [
+        Array [
+          1,
+          1,
+        ],
+        Array [
+          2,
+          1,
+        ],
+        Array [
+          2,
+          2,
+        ],
+        Array [
+          1,
+          2,
+        ],
+      ],
+      "value": 2,
+    },
+  ],
+]
+`;

@@ -1,0 +1,5 @@
+include webviz_components/webviz_components.min.js
+include webviz_components/webviz_components.dev.js
+include webviz_components/metadata.json
+include webviz_components/package.json
+include README.md

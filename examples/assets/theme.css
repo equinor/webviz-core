@@ -1,0 +1,21 @@
+#logo {
+    height: 99px;
+    width: 250px;
+    background-size: contain;
+    background-image: url("burn.svg");
+    background-repeat: no-repeat;
+}
+:root {
+    --menuLinkFont: helvetica;
+    --menuLogoHeight: 75px;
+    --menuBackground: #ffffff;
+    --menuLinkBackgroundHover: ;#198ee2
+    --menuLinkBackgroundSelected: #198ee2;
+    --menuLinkColor: #198ee2;
+    --menuLinkColorSelected: black;
+    --menuLinkFontStyle: normal;
+    --menuLinkFontWeight: 500;
+    --menuLinkHoverColor: #198ee2;
+    --bannerFontFamily: helvetica;
+    --bannerFontWeight: 700;
+}

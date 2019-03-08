@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render Menu 1`] = `
+.c4 {
+  color: var(--menuLinkColor);
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.c4:hover {
+  color: var(--menuLinkHoverColor);
+}
+
+.c0 {
+  background: var(--menuBackground);
+}
+
+.c1 {
+  background: var(--menuBackground);
+  min-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-familiy: system-ui;
+}
+
+.c5 {
+  margin: 12px 20px 20px 18px;
+  margin: 20px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-family: var(--menuLinkFont);
+  font-weight: var(--menuLinkFontWeight);
+  font-style: var(--menuLinkFontStyle);
+  border-bottom: 1px solid white;
+  color: var(--menuLinkColor);
+}
+
+.c8:hover {
+  background: var(--menuLinkBackgroundHover);
+  color: var(--menuLinkHoverColor);
+}
+
+@media (min-width:1201px) {
+  .c0 {
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: fill-available;
+  }
+}
+
+@media (max-width:1200px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (min-width:1201px) {
+  .c7 {
+    height: 100%;
+  }
+}
+
+@media (max-width:1200px) {
+  .c6 {
+    text-align: center;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width:1200px) {
+  .c5 {
+    height: 50px;
+    margin: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width:1201px) {
+  .c3 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <button
+          className="c4"
+          onClick={[Function]}
+        >
+          <svg
+            fill="None"
+            height="18px"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="4"
+            width="22px"
+          >
+            <path
+              d="M2,2 L20,2 M2,9 L20,9 M2,16 L20,16"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="c5"
+      >
+        <a
+          className="c6"
+          href="/"
+          onClick={[Function]}
+        >
+          <div
+            id="logo"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="c7"
+    >
+      <a
+        className="c8"
+        href="/subpage 1"
+        onClick={[Function]}
+        selected={null}
+      >
+        Subpage 1
+      </a>
+      <a
+        className="c8"
+        href="/subpage 2"
+        onClick={[Function]}
+        selected={null}
+      >
+        Subpage 2
+      </a>
+    </div>
+  </div>
+</div>
+`;

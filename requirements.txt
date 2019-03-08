@@ -1,0 +1,10 @@
+pytest
+plotly
+pandas
+dash
+dash_html_components
+dash_core_components
+matplotlib
+jupyter
+nbconvert
+flask

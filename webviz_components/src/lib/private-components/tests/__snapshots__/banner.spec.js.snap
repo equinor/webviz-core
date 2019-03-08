@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner should render Banner 1`] = `
+.c0 {
+  background-color: #333333;
+  height: 534px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: var(--bannerFontFamily);
+  font-weight: var(--bannerFontWeight);
+}
+
+@media (max-width:1200px) {
+  .c0 {
+    height: 380px;
+  }
+}
+
+<div
+  className="c0"
+  color="#333333"
+  role="banner"
+>
+  <p
+    className="c1"
+  >
+    Banner Title
+  </p>
+</div>
+`;
