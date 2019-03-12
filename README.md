@@ -32,4 +32,4 @@ The components are installable via pyip
 
 See [plotly reference documentation](https://plot.ly/python/reference/) and the
 `examples/` folder. For internal Equinor usage, information about using Equinor
-styling can be found [here](github.com/equinor/webviz-css).
+styling can be found [here](/equinor/webviz-css).
