@@ -18,8 +18,9 @@
     "test:watchAll": "npm run test -- --watchAll",
     "analyze": "webpack --profile --json > stats.json"
   },
-  "author": "Árni Geir Úlfarsson arnigeir@gmail.com",
-  "license": "MIT",
+  "author": "Equinor",
+  "author_email": "ejah@equinor.com",
+  "license": "LGPL",
   "dependencies": {
     "d3": "^5.7.0",
     "plotly": "^1.0.6",
