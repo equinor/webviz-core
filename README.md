@@ -24,8 +24,8 @@ The components are installable via pyip
 
 # Build from source
 
-    pushd webviz_components && npm install && npm run build:all && pip install . ; popd
-    pushd webviz_plotly && pip install . ; popd
+    pushd webviz_components && npm install && npm run build:all && python setup.py install ; popd
+    pushd webviz_plotly && python setup.py install ; popd
 
 
 # Usage
