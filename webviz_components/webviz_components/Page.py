@@ -12,16 +12,13 @@ Keyword arguments:
 - id (string; required): The ID of this component, used to identify dash components
 in callbacks. The ID needs to be unique across all of the
 components in an app.
-- title (string; required): The title of this page. Will be displayed in the menu.
-
-Available events: """
+- title (string; required): The title of this page. Will be displayed in the menu."""
     @_explicitize_args
     def __init__(self, children=None, id=Component.REQUIRED, title=Component.REQUIRED, **kwargs):
         self._prop_names = ['children', 'id', 'title']
         self._type = 'Page'
         self._namespace = 'webviz_components'
         self._valid_wildcard_attributes =            []
-        self.available_events = []
         self.available_properties = ['children', 'id', 'title']
         self.available_wildcard_properties =            []
 
@@ -35,26 +32,3 @@ Available events: """
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
         super(Page, self).__init__(children=children, **args)
-
-    def __repr__(self):
-        if(any(getattr(self, c, None) is not None
-               for c in self._prop_names
-               if c is not self._prop_names[0])
-           or any(getattr(self, c, None) is not None
-                  for c in self.__dict__.keys()
-                  if any(c.startswith(wc_attr)
-                  for wc_attr in self._valid_wildcard_attributes))):
-            props_string = ', '.join([c+'='+repr(getattr(self, c, None))
-                                      for c in self._prop_names
-                                      if getattr(self, c, None) is not None])
-            wilds_string = ', '.join([c+'='+repr(getattr(self, c, None))
-                                      for c in self.__dict__.keys()
-                                      if any([c.startswith(wc_attr)
-                                      for wc_attr in
-                                      self._valid_wildcard_attributes])])
-            return ('Page(' + props_string +
-                   (', ' + wilds_string if wilds_string != '' else '') + ')')
-        else:
-            return (
-                'Page(' +
-                repr(getattr(self, self._prop_names[0], None)) + ')')
