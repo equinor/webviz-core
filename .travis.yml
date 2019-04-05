@@ -24,16 +24,21 @@ before_install:
 install:
   - pip install -r requirements.txt
   - pip install -r webviz_components/dev-requirements.txt
-  - cd webviz_components
+  - pushd webviz_components
   - npm install
-  - cd ..
+  - popd
+  - virtualenv venv
 
 script:
-  - cd webviz_plotly
-  - pip install .
+  - pushd webviz_components
+  - npm run build:all
+  - python setup.py install
+  - npm run lint
+  - npm run test
+  - popd
+  - pushd webviz_plotly
+  - python setup.py install
   - pycodestyle src tests ../examples
   - pytest --doctest-modules src/webviz_plotly
   - pytest tests
-  - cd ../webviz_components
-  - npm run lint
-  - npm run test
+  - popd
