@@ -14,13 +14,16 @@ components in an app.
 - data (string; required): The data the Map component should render.
 It should be JSON stringified before hand
 - height (number; optional): The height of the Map component
-- layerNames (list; optional): The name of individual layers"""
+- layerNames (list; optional): The name of individual layers
+
+Available events: """
     @_explicitize_args
     def __init__(self, id=Component.REQUIRED, data=Component.REQUIRED, height=Component.UNDEFINED, layerNames=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id', 'data', 'height', 'layerNames']
         self._type = 'Map'
         self._namespace = 'webviz_components'
         self._valid_wildcard_attributes =            []
+        self.available_events = []
         self.available_properties = ['id', 'data', 'height', 'layerNames']
         self.available_wildcard_properties =            []
 
@@ -34,3 +37,26 @@ It should be JSON stringified before hand
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
         super(Map, self).__init__(**args)
+
+    def __repr__(self):
+        if(any(getattr(self, c, None) is not None
+               for c in self._prop_names
+               if c is not self._prop_names[0])
+           or any(getattr(self, c, None) is not None
+                  for c in self.__dict__.keys()
+                  if any(c.startswith(wc_attr)
+                  for wc_attr in self._valid_wildcard_attributes))):
+            props_string = ', '.join([c+'='+repr(getattr(self, c, None))
+                                      for c in self._prop_names
+                                      if getattr(self, c, None) is not None])
+            wilds_string = ', '.join([c+'='+repr(getattr(self, c, None))
+                                      for c in self.__dict__.keys()
+                                      if any([c.startswith(wc_attr)
+                                      for wc_attr in
+                                      self._valid_wildcard_attributes])])
+            return ('Map(' + props_string +
+                   (', ' + wilds_string if wilds_string != '' else '') + ')')
+        else:
+            return (
+                'Map(' +
+                repr(getattr(self, self._prop_names[0], None)) + ')')
