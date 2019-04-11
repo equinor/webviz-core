@@ -27,21 +27,33 @@ class Layout extends Component {
             ? children
             : [children];
         const subPageProps = subPages.map(({props}) => {
-            // Get props from _dashprivate_layout
-            const props2 = props._dashprivate_layout.props;
+            // If dashprivate_layout, get props from there
+            // Else, get props from component itself
+            const props2 =
+                props._dashprivate_layout && props._dashprivate_layout.props
+                    ? props._dashprivate_layout.props
+                    : props;
+
             if (props2 && !props2.title && props2.children) {
                 return props2.children.props;
             }
+
             return props2;
         });
         const pages = subPages.map((page) => {
-            // Get props from _dashprivate_layout
-            const pageProps = page.props._dashprivate_layout.props;
+            // If dashprivate_layout, get props from there
+            // Else, get props from component itself
+            const pageProps =
+                page.props._dashprivate_layout &&
+                page.props._dashprivate_layout.props
+                    ? page.props._dashprivate_layout.props
+                    : page.props;
+
             <Route
                 key={pageProps.id}
                 path={`${basepath}/${pageProps.id}`}
                 render={() => <PageWrapper>{page}</PageWrapper>}
-            />
+            />;
         });
         return (
             <BrowserRouter>
