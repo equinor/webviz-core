@@ -40,7 +40,7 @@ class Layout extends Component {
 
             return props2;
         });
-        const pages = subPages.map((page) => {
+        const pages = subPages.map(page => {
             // If dashprivate_layout, get props from there
             // Else, get props from component itself
             const pageProps =
@@ -49,11 +49,13 @@ class Layout extends Component {
                     ? page.props._dashprivate_layout.props
                     : page.props;
 
-            <Route
-                key={pageProps.id}
-                path={`${basepath}/${pageProps.id}`}
-                render={() => <PageWrapper>{page}</PageWrapper>}
-            />;
+            return (
+                <Route
+                    key={pageProps.id}
+                    path={`${basepath}/${pageProps.id}`}
+                    render={() => <PageWrapper>{page}</PageWrapper>}
+                />
+            );
         });
         return (
             <BrowserRouter>
