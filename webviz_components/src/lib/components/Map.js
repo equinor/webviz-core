@@ -188,13 +188,11 @@ class Map extends Component {
 
     render() {
         /* eslint-disable react/destructuring-assignment, react/prop-types */
-
         const {props} =
             this.props._dashprivate_layout &&
             this.props._dashprivate_layout.props
                 ? this.props._dashprivate_layout
                 : this;
-
         /* eslint-enable react/destructuring-assignment, react/prop-types */
 
         const {height} = props;
