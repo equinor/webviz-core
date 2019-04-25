@@ -56,7 +56,7 @@ exports[`Menu should render Menu 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 30px;
-  font-familiy: system-ui;
+  font-family: system-ui;
 }
 
 .c5 {

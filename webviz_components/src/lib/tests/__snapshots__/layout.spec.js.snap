@@ -56,7 +56,7 @@ exports[`Layout should render Layout with banner 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 30px;
-  font-familiy: system-ui;
+  font-family: system-ui;
 }
 
 .c6 {
@@ -317,7 +317,7 @@ exports[`Layout should render Layout with multiple child elements 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 30px;
-  font-familiy: system-ui;
+  font-family: system-ui;
 }
 
 .c6 {
@@ -570,7 +570,7 @@ exports[`Layout should render Layout with one child element 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 30px;
-  font-familiy: system-ui;
+  font-family: system-ui;
 }
 
 .c6 {
