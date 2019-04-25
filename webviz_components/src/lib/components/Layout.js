@@ -40,6 +40,7 @@ class Layout extends Component {
 
             return props2;
         });
+
         const pages = subPages.map(page => {
             // If dashprivate_layout, get props from there
             // Else, get props from component itself
