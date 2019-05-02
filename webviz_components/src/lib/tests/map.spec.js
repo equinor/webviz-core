@@ -26,7 +26,14 @@ const dataWithFlow = {
 describe('Map', () => {
     it('should render Map', () => {
         const tree = renderer.create(
-            <Map id="simple-map" data={JSON.stringify(dataWithFlow)} />
+            <Map
+                _dashprivate_layout={{
+                    props: {
+                        id: 'simple-map',
+                        data: JSON.stringify(dataWithFlow),
+                    },
+                }}
+            />
         );
         expect(tree.toJSON()).toMatchSnapshot();
     });

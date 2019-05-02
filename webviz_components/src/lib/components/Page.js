@@ -6,16 +6,20 @@ import PropTypes from 'prop-types';
 class Page extends Component {
     render() {
         /* eslint-disable react/destructuring-assignment, react/prop-types */
-        const {props} =
+        const dashProps =
             this.props._dashprivate_layout &&
             this.props._dashprivate_layout.props
-                ? this.props._dashprivate_layout
-                : this;
+                ? this.props._dashprivate_layout.props
+                : this.props;
         /* eslint-enable react/destructuring-assignment, react/prop-types */
 
         return (
-            <div style={{margin: '20px'}} id={props.id} key={props.title}>
-                {props.children}
+            <div
+                style={{margin: '20px'}}
+                id={dashProps.id}
+                key={dashProps.title}
+            >
+                {dashProps.children}
             </div>
         );
     }

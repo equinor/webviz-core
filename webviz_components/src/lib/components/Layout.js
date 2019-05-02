@@ -22,28 +22,33 @@ const Wrapper = styled.div`
 
 class Layout extends Component {
     render() {
-        const {children, banner, basepath} = this.props;
+        /* eslint-disable react/destructuring-assignment */
+        const dashProps =
+            this.props._dashprivate_layout &&
+            this.props._dashprivate_layout.props
+                ? this.props._dashprivate_layout.props
+                : this.props;
+        /* eslint-enable react/destructuring-assignment */
+
+        const {children, banner, basepath} = dashProps;
         const [frontPage, ...subPages] = Array.isArray(children)
             ? children
             : [children];
+
         const subPageProps = subPages.map(({props}) => {
-            // If dashprivate_layout, get props from there
-            // Else, get props from component itself
-            const props2 =
+            const pageProps =
                 props._dashprivate_layout && props._dashprivate_layout.props
                     ? props._dashprivate_layout.props
                     : props;
 
-            if (props2 && !props2.title && props2.children) {
-                return props2.children.props;
+            if (pageProps && !pageProps.title && pageProps.children) {
+                return pageProps.children.props;
             }
 
-            return props2;
+            return pageProps;
         });
 
         const pages = subPages.map(page => {
-            // If dashprivate_layout, get props from there
-            // Else, get props from component itself
             const pageProps =
                 page.props._dashprivate_layout &&
                 page.props._dashprivate_layout.props
