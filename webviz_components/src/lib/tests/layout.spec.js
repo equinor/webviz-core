@@ -47,33 +47,41 @@ describe('Layout', () => {
         expect(tree.toJSON()).toMatchSnapshot();
     });
 
-    it('should not compare props before updates by default', () => {
-        jest.mock('deep-equal', () => jest.fn(() => true));
-
-        const equal = require('deep-equal'); // eslint-disable-line global-require
-        renderer.create(
+    it('should render Layout with multiple child elements as a dash component', () => {
+        const dashTree = renderer.create(
+            <Layout
+                _dashprivate_layout={{
+                    props: {
+                        children: [
+                            <div id="frontpage" title="Frontpage">
+                                Frontpage
+                            </div>,
+                            <div id="subpage 1" title="Subpage 1">
+                                Subpage 1
+                            </div>,
+                            <div id="subpage 2" title="Subpage 2">
+                                Subpage 2
+                            </div>,
+                        ],
+                        banner: null,
+                        basepath: '',
+                    },
+                }}
+            />
+        );
+        const tree = renderer.create(
             <Layout>
-                <div id="page" title="Page">
-                    Page
+                <div id="frontpage" title="Frontpage">
+                    Frontpage
+                </div>
+                <div id="subpage 1" title="Subpage 1">
+                    Subpage 1
+                </div>
+                <div id="subpage 2" title="Subpage 2">
+                    Subpage 2
                 </div>
             </Layout>
         );
-        expect(equal).toHaveBeenCalledTimes(0);
-        equal.mockRestore();
-    });
-
-    it('should compare props before updates if strictUpdates is true', () => {
-        jest.mock('deep-equal', () => jest.fn(() => true));
-
-        const equal = require('deep-equal'); // eslint-disable-line global-require
-        renderer.create(
-            <Layout stirctUpdate>
-                <div id="page" title="Page">
-                    Page
-                </div>
-            </Layout>
-        );
-        expect(equal).toHaveBeenCalledTimes(0);
-        equal.mockRestore();
+        expect(dashTree.toString()).toEqual(tree.toString());
     });
 });

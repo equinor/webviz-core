@@ -30,6 +30,24 @@ describe('Map', () => {
         );
         expect(tree.toJSON()).toMatchSnapshot();
     });
+    it('should render Map as a dash component', () => {
+        const dashTree = renderer.create(
+            <Map
+                id="simple-map"
+                data=""
+                _dashprivate_layout={{
+                    props: {
+                        id: 'simple-map',
+                        data: JSON.stringify(dataWithFlow),
+                    },
+                }}
+            />
+        );
+        const tree = renderer.create(
+            <Map id="simple-map" data={JSON.stringify(dataWithFlow)} />
+        );
+        expect(tree.toString()).toEqual(dashTree.toString());
+    });
 });
 
 describe('makeFlowLayers', () => {

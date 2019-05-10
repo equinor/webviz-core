@@ -1,4 +1,5 @@
 /* eslint-disable react/no-children-prop */
+/* eslint-disable react/no-unused-prop-types */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Link} from 'react-router-dom';
@@ -42,7 +43,7 @@ const MainLinkWrapper = styled.div`
 const LinkHome = styled(Link)`
     text-decoration: none;
     font-size: 30px;
-    font-familiy: system-ui;
+    font-family: system-ui;
     @media (max-width: 1200px) {
         text-align: center;
         margin-left: -50px;
@@ -104,8 +105,17 @@ class Menu extends Component {
     }
 
     render() {
-        const {subPages, basePath} = this.props;
+        /* eslint-disable react/destructuring-assignment, react/prop-types */
+        const {props} =
+            this.props._dashprivate_layout &&
+            this.props._dashprivate_layout.props
+                ? this.props._dashprivate_layout
+                : this;
+        /* eslint-enable react/destructuring-assignment, react/prop-types */
+
+        const {subPages, basePath} = props;
         const {menuOpen} = this.state;
+
         return (
             <OuterWrapper>
                 <Wrapper>

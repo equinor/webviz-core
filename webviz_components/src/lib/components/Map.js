@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FlowMap from '../private-components/map/flow_map';
@@ -155,14 +156,24 @@ const shouldRenderFlowMap = data => Boolean(data['FLOWI+']);
 class Map extends Component {
     constructor(props) {
         super(props);
+
+        /* eslint-disable react/destructuring-assignment, react/prop-types */
+        const dashProps =
+            props._dashprivate_layout && props._dashprivate_layout.props
+                ? props._dashprivate_layout.props
+                : props;
+
+        this.dashProps = {...this.props, dashProps};
+        /* eslint-enable react/destructuring-assignment, react/prop-types */
+
         this.canvas = null;
-        this.canvasId = `canvas-${props.id}`;
-        this.elementId = `container-${props.id}`;
+        this.canvasId = `canvas-${dashProps.id}`;
+        this.elementId = `container-${dashProps.id}`;
     }
 
     componentDidMount() {
         if (this.canvas) {
-            const {data, height, layerNames} = this.props;
+            const {data, height, layerNames} = this.dashProps;
             const parsedData = parseData(data);
             const isFlowMap = shouldRenderFlowMap(parsedData);
             const canvasSelector = `#${this.canvasId}`;
@@ -187,7 +198,7 @@ class Map extends Component {
     }
 
     render() {
-        const {height} = this.props;
+        const {height} = this.dashProps;
         return (
             <div
                 style={{

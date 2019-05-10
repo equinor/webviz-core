@@ -22,23 +22,47 @@ const Wrapper = styled.div`
 
 class Layout extends Component {
     render() {
-        const {children, banner, basepath} = this.props;
+        /* eslint-disable react/destructuring-assignment */
+        const dashProps =
+            this.props._dashprivate_layout &&
+            this.props._dashprivate_layout.props
+                ? this.props._dashprivate_layout.props
+                : this.props;
+        /* eslint-enable react/destructuring-assignment */
+
+        const {children, banner, basepath} = dashProps;
         const [frontPage, ...subPages] = Array.isArray(children)
             ? children
             : [children];
+
         const subPageProps = subPages.map(({props}) => {
-            if (props && !props.title && props.children) {
-                return props.children.props;
+            const pageProps =
+                props._dashprivate_layout && props._dashprivate_layout.props
+                    ? props._dashprivate_layout.props
+                    : props;
+
+            if (pageProps && !pageProps.title && pageProps.children) {
+                return pageProps.children.props;
             }
-            return props;
+
+            return pageProps;
         });
-        const pages = subPages.map(page => (
-            <Route
-                key={page.id}
-                path={`${basepath}/${page.props.id}`}
-                render={() => <PageWrapper>{page}</PageWrapper>}
-            />
-        ));
+
+        const pages = subPages.map(page => {
+            const pageProps =
+                page.props._dashprivate_layout &&
+                page.props._dashprivate_layout.props
+                    ? page.props._dashprivate_layout.props
+                    : page.props;
+
+            return (
+                <Route
+                    key={pageProps.id}
+                    path={`${basepath}/${pageProps.id}`}
+                    render={() => <PageWrapper>{page}</PageWrapper>}
+                />
+            );
+        });
         return (
             <BrowserRouter>
                 <Wrapper id="layout">

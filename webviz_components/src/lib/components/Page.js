@@ -1,11 +1,29 @@
-import React from 'react';
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable react/prefer-stateless-function */
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-const Page = ({id, children, title}) => (
-    <div style={{margin: '20px'}} id={id} key={title}>
-        {children}
-    </div>
-);
+class Page extends Component {
+    render() {
+        /* eslint-disable react/destructuring-assignment, react/prop-types */
+        const dashProps =
+            this.props._dashprivate_layout &&
+            this.props._dashprivate_layout.props
+                ? this.props._dashprivate_layout.props
+                : this.props;
+        /* eslint-enable react/destructuring-assignment, react/prop-types */
+
+        return (
+            <div
+                style={{margin: '20px'}}
+                id={dashProps.id}
+                key={dashProps.title}
+            >
+                {dashProps.children}
+            </div>
+        );
+    }
+}
 
 Page.defaultProps = {
     children: null,
