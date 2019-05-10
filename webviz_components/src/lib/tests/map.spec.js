@@ -26,7 +26,15 @@ const dataWithFlow = {
 describe('Map', () => {
     it('should render Map', () => {
         const tree = renderer.create(
+            <Map id="simple-map" data={JSON.stringify(dataWithFlow)} />
+        );
+        expect(tree.toJSON()).toMatchSnapshot();
+    });
+    it('should render Map as a dash component', () => {
+        const dashTree = renderer.create(
             <Map
+                id="simple-map"
+                data=""
                 _dashprivate_layout={{
                     props: {
                         id: 'simple-map',
@@ -35,7 +43,10 @@ describe('Map', () => {
                 }}
             />
         );
-        expect(tree.toJSON()).toMatchSnapshot();
+        const tree = renderer.create(
+            <Map id="simple-map" data={JSON.stringify(dataWithFlow)} />
+        );
+        expect(tree.toString()).toEqual(dashTree.toString());
     });
 });
 

@@ -2,7 +2,7 @@
 # Switch into a virtual environment
 
 chromedriver-binary
-dash>=0.31.0
+dash>=0.40.0
 dash-core-components
 dash-html-components
 dash-renderer

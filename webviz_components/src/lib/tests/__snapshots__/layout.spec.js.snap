@@ -72,6 +72,42 @@ exports[`Layout should render Layout with banner 1`] = `
   align-items: center;
 }
 
+.c10 {
+  background-color: #333333;
+  height: 534px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: var(--bannerFontFamily);
+  font-weight: var(--bannerFontWeight);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,6 +166,12 @@ exports[`Layout should render Layout with banner 1`] = `
 @media (min-width:1201px) {
   .c4 {
     display: none;
+  }
+}
+
+@media (max-width:1200px) {
+  .c10 {
+    height: 380px;
   }
 }
 
@@ -193,6 +235,27 @@ exports[`Layout should render Layout with banner 1`] = `
       <div
         className="c8"
       />
+    </div>
+  </div>
+  <div
+    className="c9"
+  >
+    <div
+      className="c10"
+      color="#333333"
+      role="banner"
+    >
+      <p
+        className="c11"
+      >
+        Banner
+      </p>
+    </div>
+    <div
+      id="page"
+      title="Page"
+    >
+      Page
     </div>
   </div>
 </div>
@@ -285,6 +348,17 @@ exports[`Layout should render Layout with multiple child elements 1`] = `
 .c9:hover {
   background: var(--menuLinkBackgroundHover);
   color: var(--menuLinkHoverColor);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
 }
 
 .c0 {
@@ -427,6 +501,16 @@ exports[`Layout should render Layout with multiple child elements 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="c10"
+  >
+    <div
+      id="frontpage"
+      title="Frontpage"
+    >
+      Frontpage
+    </div>
+  </div>
 </div>
 `;
 
@@ -500,6 +584,17 @@ exports[`Layout should render Layout with one child element 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
 }
 
 .c0 {
@@ -623,6 +718,16 @@ exports[`Layout should render Layout with one child element 1`] = `
       <div
         className="c8"
       />
+    </div>
+  </div>
+  <div
+    className="c9"
+  >
+    <div
+      id="page"
+      title="page"
+    >
+      Page
     </div>
   </div>
 </div>
